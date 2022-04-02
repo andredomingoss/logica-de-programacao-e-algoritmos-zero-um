@@ -1,7 +1,31 @@
 1 - Na sua opnião, lógica de programação é importante? Reflita.
+Sim. Pois ela é a base para aprendermos programação de fato
 
 2 - Crie uma seqüência lógica para ir ao mercado.
+.inicio
+.Pegar a carteira
+.Pegar a chave do carro
+.ir até o carro
+.entrar no carro
+.ligar o carro 
+.ir até o mercado
+. fim
 
 3 - Faça um algoritmo para somar dois números.
+. inicio
+. n1,n2
+. soma -> n1 + n2
+. imprimir soma
+. fim
 
 4 - Faça um algoritmo para trocar uma lâmpada. Descreva com detalhes.
+. inicio
+.Pegar a escada
+.Posicionar a escada de baixo da lâmpada 
+.Pegar uma nova lâmpada
+.Subir na escada
+.Tirar a lâmpada ruim
+.Colocar a lâmpada nova
+.Descer da escada
+.Acender o interruptor 
+. fim
