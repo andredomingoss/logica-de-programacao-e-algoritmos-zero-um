@@ -1,7 +1,45 @@
 A partir de agora, no VisualG, OK?
 
 1 - Faça um algoritmo para somar dois números.
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+Var
+n1,n2, soma: inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+escreval("Digite o primeiro número: ")
+leia(n1)
+escreval("Digite o segundo número: ")
+leia(n2)
+soma <- n1 + n2
+escreval("A soma entre n1 e n2 é: ", soma)
+
+Fimalgoritmo
 
 2 - Faça um algoritmo que calcule a média de um aluno, e apresente o resultado com a mensagem "A media do aluno X foi Y". Troque X pelo nome do aluno, e Y pela nota do aluno.
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+Var
+nota1, nota2, nota3, nota4, media: real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc...
+
+ escreval("Digite a primeira nota é: ")
+ leia(nota1)
+ escreval("Digite a segunda nota é: ")
+ leia(nota2)
+ escreval("Digite a terceira nota é: ")
+ leia(nota3)
+ escreval("Digite a quarta nota é: ")
+ leia(nota4)
+
+ media <- (nota1 + nota2 + nota3 + nota4) / 4
+ escreval("A média de José foi: ", media)
+Fimalgoritmo
 
 3 - Exemplifique 2 regras de variáveis do VisualG.
+A variável booleano é apenas para verdadeiro e faço, por exempo. "Você tem mais de 30?" se tiver vai responder verdadeiro, se for não tiver vai responder falso. A variável Caractere é uma string, ou seja, ela so funcionara se tiver entre aspas pois ela vai ler como um texto.
