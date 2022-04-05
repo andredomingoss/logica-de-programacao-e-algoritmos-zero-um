@@ -1,6 +1,45 @@
 1 - Crie um algoritmo que receba suas informações (pelo menos nome, idade, e curso atual), e exiba na tela.
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+Var
+nome, cursoAtual: caractere
+idade: inteiro
+
+
+Inicio
+escreval("Digite seu nome: ")
+leia(nome)
+escreval("Digite sua idade: ")
+leia(idade)
+escreval("Digite o curso que está fazendo: ")
+leia(cursoAtual)
+escreval("Seu nome é, ", nome, " você tem " , idade, " e o curso que está fazendo é ", cursoAtual)
+
+Fimalgoritmo
 
 2 - Faça um algoritmo que calcule a idade de uma pessoa com base em sua idade em total da idade (ex: 25), meses (ex: 8) e dias após o dia do seu aniversário no mês atual (ex:5) (o usuário quem irá inserir as informações), e exiba na tela.
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+Var
+idadeAtual, dias, meses, idade: inteiro
+
+
+Inicio
+escreval("Digite a sua idade atual: ")
+leia(idadeAtual)
+escreval("Digite quantos meses tem desde seu último aniversário: ")
+leia(meses)
+escreval("Digite quantos dias tem desde seu aniversário no mês atual: ")
+leia(dias)
+idade  <- idade + (idadeAtual * 365)
+idade  <- idade + (meses * 30)
+idade  <- idade + dias
+escreval("Sua idade em dias é: ", idade)
+escreval("Sua idade total em anos é: ", idade / 365)
+
+Fimalgoritmo
 
 3 - Tendo como dados de entrada a altura e o sexo de uma pessoa, construa um algoritmo que calcule seu peso ideal, e informe se o peso atual está dentro do ideal, utilizando as seguintes fórmulas:
 
@@ -8,13 +47,169 @@ Para homens: (72.7*A) - 58
 Para mulheres: (62.1*A) - 44.7 
 
 OBS: (A = altura)
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+Var
+A, pesoIdeal: real
+sexo: caractere
+
+Inicio
+escreval("A altura em (m) EX: 1,70: ")
+leia(A)
+escreval("Sexo: Homem/Mulher: ")
+leia (sexo)
+
+se ((sexo = "Homem") ou (sexo = "homem")) entao
+   pesoIdeal <- (72.7*A) - 58
+fimse
+se ((sexo = "Mulher") ou (sexo = "mulher"))  entao
+   pesoIdeal <- (62.1*A) - 44.7
+fimse
+
+escreval("Seu peso ideal é: ", pesoIdeal)
+Fimalgoritmo
 
 4 - Tendo como dados de entrada a altura e o peso (kg), construa um algoritmo que calcule seu IMC, e informe se o IMC está dentro do ideal.
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+Var
+altura, peso, IMC: real
+
+
+Inicio
+escreval("A altura em (m): ")
+leia(altura)
+escreval("Peso em (Kg): ")
+leia (peso)
+
+IMC <- peso / (altura ^ 2)
+
+escreval("IMC: ", IMC)
+se (IMC >= 18.5) e (IMC < 24.9) entao
+     escreval("Parabéns você esta no seu peso ideal! ")
+fimse
+se (IMC > 24.9) entao
+     escreval("Você não está no seu peso ideal! Você está acima do peso!")
+senao
+     escreval("Você não está no seu peso ideal! Você está abaixo do peso!")
+fimse
+Fimalgoritmo
 
 5 - Faça um algoritmo que leia o valor do produto, a porcentagem do valor do juros, e a quantidade de vezes em que foi parcelado esse produto. Calcule o valor final, além dos juros e valor por parcela, (inseridos pelo usuário), e exiba na tela toda as informações.
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+Var
+valor, JurosTotal, valorParcela, jurosPorcentagem, vezes: real
+
+
+Inicio
+escreval("Qual o valor do produto?")
+leia(valor)
+escreval("Qual a porcentagem do valor do juros?")
+leia(jurosPorcentagem)
+escreval("Em quantas vezes quer parcelar?")
+leia(vezes)
+
+JurosTotal <- (valor * jurosPorcentagem) / 100
+valorParcela <- (valor / vezes) * jurosPorcentagem / 100 (valor / vezes)
+escreval("O valor do juros será de R$", JurosTotal)
+escreval("Irei pagar ", vezes, "parcelas de R$ ", valorParcela)
+escreval("O valor final do produto será de R$ ", (valor+JurosTotal))
+
+Fimalgoritmo
 
 6 - Faça um algoritmo que receba um número e diga se ele é de par ou impar.
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+Var
+numero: inteiro
+
+
+Inicio
+escreval("Digite um número: ")
+leia(numero)
+
+se (numero % 2 = 0) entao
+   escreval("O número ", numero," é par!")
+senao
+   escreval("O número ", numero," é ímpar!")
+fimse
+
+Fimalgoritmo
 
 7 - Faça um algoritmo que receba um número e diga se ele é positivo ou negativo.
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+Var
+numero, valorPositivo: real
+
+
+Inicio
+escreval("Digite um número: ")
+leia(numero)
+
+valorPositivo <- 0
+
+se (numero >= valorPositivo) entao
+   escreval("O número ", numero, " é positivo! ")
+senao
+   escreval("O número ", numero, " é negativo! ")
+fimse
+
+Fimalgoritmo
 
 8 - Crie um algoritmo de doação com menu de escolha, que apresentará ao usuário 3 opções com valores diferentes para doação. Quando o usuário escolher, o programa deve solicitar sua confirmação, e ao final do processo exibir o valor de doação com uma mensagem de agradecimento. 
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+Var
+doacao: inteiro
+valor: real
+sim, negativo, confirmacao:logico
+
+
+Inicio
+escreval("Olá! Gostariamos de saber se Você poderia fazer uma doação")
+
+escreval("Se puder doar, estes são os valores!")
+escreval("===========================")
+escreval("Digite [1] para doar R$10")
+escreval("")
+escreval("Digite [2] para doar R$50")
+escreval("")
+escreval("Digite [3] para doar R$100")
+escreval("")
+escreval("===========================")
+escreval("Se desejar cancelar")
+escreval("Digite [4] para cancelar")
+escreval("===========================")
+leia(doacao)
+
+escolha doacao
+   caso 1
+     valor <- 10
+   caso 2
+     valor <- 50
+   caso 3
+     valor <- 100
+   caso 4
+     valor <- 0
+fimescolha
+
+se (valor <> 0) entao
+   escreval("Sua doação foi de R$", valor, ". Você confirma? [verdadeiro/falso] ")
+   leia(confirmacao)
+   
+   se((confirmacao = verdadeiro) ou (confirmacao = VERDADEIRO)) entao
+        escreval("Sua doação foi registrada com sucesso. Muito obrigado pela sua doação,! Nós agradecemos!")
+   senao
+        escreval("Sua doação foi  cancelada com sucesso")
+   fimse
+fimse
+
+Fimalgoritmo
