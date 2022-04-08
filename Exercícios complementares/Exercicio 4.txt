@@ -1,10 +1,97 @@
 1 - Faça um algoritmo que determine o maior número entre N números. A condição de parada é a entrada de um valor 0, ou seja, o algoritmo deve ficar calculando o maior até que a entrada seja igual a 0 (ZERO).
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+
+Var
+valor, maior: inteiro
+
+
+Inicio
+repita
+    escreval("Digite um valor: ")
+    leia(valor)
+    
+    se(valor > maior) entao
+        maior <- valor
+    fimse
+ate(valor = 0)
+
+escreval("O maior valor digitado: ", maior)
+
+Fimalgoritmo
 
 2 - Faça um algoritmo que conte de 1 a 100 e a cada múltiplo de 10 emita uma mensagem: "Múltiplo de 10".
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+
+Var
+contador, valor, multiplo: inteiro
+
+
+Inicio
+contador <- 1
+valor <- 100
+multiplo <- 10
+
+enquanto (contador <= valor) faca
+   escreval(contador)
+   
+   se(contador mod multiplo = 0) entao
+      escreval("O ", contador, " é multiplo de 10!")
+   fimse
+
+   contador <- contador + 1
+fimenquanto
+
+escreval("Contador terminamo!")
+
+Fimalgoritmo
 
 3 - Faça um algoritmo que conte de 0 a 10, exiba a contagem na tela.
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+
+Var
+numero: inteiro
+
+
+Inicio
+para numero <- 0 ate 10 faca
+   escreval(numero)
+fimpara
+
+escreval("Foi mostrado 11 números ao total. Pois do 0 até o 10 são 11 números!")
+
+Fimalgoritmo
 
 4 - Crie um algoritmo de tabuada, o usuário poderá escolher qual tabuada ele deseja ver, o programa irá calcular e exibir na tela.
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+
+Var
+multiplicador, numero, resultado: inteiro
+
+
+Inicio
+multiplicador <- 1
+escreval("Digite um número para ver na tabuada: ")
+leia(numero)
+escreval("Tabuada de ", numero, ":")
+escreval("===============")
+
+repita
+   resultado <- numero * multiplicador
+   escreval( numero, " x ", multiplicador, " = ", resultado)
+   
+   multiplicador <- multiplicador + 1
+ate(multiplicador > 10)
+escreval("===============")
+
+Fimalgoritmo
 
 5 - Faça um algoritmo que receba 5 valores, e exiba a: 
 * Soma dos valores
@@ -12,8 +99,76 @@
 * quantos sao divisiveis por 5
 * quantos sao nulos
 * soma dos pares
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+
+Var
+valor : vetor [0..4] de inteiro
+contador, soma, par, divisor: inteiro
+media: real
+
+Inicio
+divisor <- 5
+para contador de 0 ate 4 faca
+   escreval("Entre com um número:")
+   leia(valor[contador])
+   
+   soma <- soma + valor[contador])
+   media <- soma / 5
+
+   se (valor[contador] % 2 = 0) entao
+       par <- par + valor[contador]
+   fimse
+   
+   se(valor[contador] mod divisor = 0) entao
+        escreval("O ",valor[contador]," é divisível por 5!")
+   fimse
+   
+fimpara
+escreval("========================")
+escreval("A soma dos valores é: ", soma)
+escreval("A média  dos valores é: ", media)
+escreval("A soma dos valores pares é: ", par)
+
+Fimalgoritmo
 
 6 - Construa um algoritmo que leia X valores inteiros e positivos e:
 • Encontre o maior valor
 • Encontre o menor valor
 • Calcule a soma dos números lidos
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Autor(a)    : André Domingos
+
+Var
+quantidade, contador, numero, maior, menor, soma: inteiro
+
+
+Inicio
+escreval("Digite a quantidade de valores que você quer inserir: ")
+leia(quantidade)
+
+contador <- 1
+
+enquanto (contador <= quantidade) faca
+   escreval("Digite o valor do número ", contador, ":")
+   leia(numero)
+   
+   se(numero > maior) entao
+     maior <- numero
+   senao
+     se(numero < maior) entao
+       menor <- numero
+     fimse
+   fimse
+   
+   contador <- contador + 1
+   soma <- soma + numero
+fimenquanto
+
+escreval("O maior valor digitado foi:", maior)
+escreval("O menor valor digitado foi:", menor)
+escreval("A soma de todos os valores digitados foi:", soma)
+
+Fimalgoritmo
